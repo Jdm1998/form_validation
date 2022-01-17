@@ -1,0 +1,39 @@
+.UserList{
+    background-color:  rgb(216, 225, 241);
+    border: 2px solid black;
+    width: 80vw;
+    margin-left: 10vw;
+}
+.heading{
+    display: flex;
+    align-items: flex-start;
+    margin: 0 20vw
+
+;
+    
+}
+.H{
+    background-color: rgb(216, 225, 241);
+    ;
+  margin: 10px;
+  padding:5px;
+  width: 90px;
+  border-bottom: black 2px solid;
+  
+}
+.name{
+    margin-left: 100px;
+    width: 60px;
+  
+}
+.age{
+    margin-left:20px;
+    width: 40px;
+  
+}
+.phn{
+   width: 120px;
+}
+.email{
+    width: 200px;
+}

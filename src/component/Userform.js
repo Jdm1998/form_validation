@@ -1,9 +1,27 @@
 import React from 'react'
 import './Userform.css'
-export const Userform = () => {
+export const Userform = (props) => {
+    const user={};
+   const namehandler=(event)=>{
+        user.name=event.target.value;
+    }
+   const agehandler=(event)=>{
+        user.age=event.target.value;
+    }
+   const phnhandler=(event)=>{
+        user.phn=event.target.value;
+    }
+   const emailhandler=(event)=>{
+        user.email=event.target.value;
+    }
+    const submithandler=(event)=>{
+        event.preventDefault();
+        props.setusers(user);
+        
+    }
     return (
         <div className='userForm'>
-            <form>
+            <form onSubmit={submithandler}>
 
                 <div className='heading'>
                     User Form
@@ -14,7 +32,7 @@ export const Userform = () => {
                     </label>
                 </div>
                 <div className='formNameI'>
-                    <input type='text'>
+                    <input type='text' onChange={namehandler}>
 
                     </input>
                 </div>
@@ -25,7 +43,7 @@ export const Userform = () => {
                     </label>
                 </div>
                 <div className='formAgeI'>
-                    <input type='number'>
+                    <input type='number' onChange={agehandler}>
                         
                     </input>
                 </div>
@@ -35,7 +53,7 @@ export const Userform = () => {
                     </label>
                 </div>
                 <div className='formPhnI'>
-                    <input type='number'>
+                    <input type='number' onChange={phnhandler}>
                         
                     </input>
                 </div>
@@ -46,7 +64,7 @@ export const Userform = () => {
                     </label>
                 </div>
                 <div className='formEmailI'>
-                    <input type='text'>
+                    <input type='text' onChange={emailhandler}>
                         
                     </input>
                 </div>
