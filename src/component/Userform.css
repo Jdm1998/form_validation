@@ -1,0 +1,70 @@
+.userForm{
+    border: 1px solid black;
+    background-color:rgb(94, 94, 158);
+    border-radius: 20px;
+    display: flex;
+    padding-right: 10px;
+    width: 40vw;
+    margin-left: 30vw;
+    
+}
+.heading{
+    margin: auto 40%;
+    color:rgb(59, 46, 70);
+    font-size: x-large;
+    
+}
+
+.formName{
+    color:rgb(5, 5, 54);
+    display: inline;
+    padding-left: 3vw;
+    
+;
+}
+
+.formNameI{
+    padding-bottom: 10px;
+    display: inline;
+
+}
+.formAge{
+    color: rgb(5, 5, 54);
+    display: inline;
+    
+    margin-left: 6vw;
+    margin-right: 6px;
+   
+}
+.formAgeI{
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-right: 2vw;
+}
+.formPhn{
+display: inline;
+margin-left: 1vw;;
+
+}
+.formPhnI{
+    display: inline;
+    
+}
+.formEmail{
+    display: inline;
+    margin-left:1vw;
+    padding-right: 10px;
+    
+}
+.formEmailI{
+    display: inline;
+}
+
+.userForm button{
+margin-top: 10px ;
+margin-left: 17vw;
+background-color: rgb(193, 193, 241);
+height: 5vh;
+width: 5vw;
+margin-bottom: 10px;
+}
