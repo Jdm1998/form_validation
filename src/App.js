@@ -11,8 +11,8 @@ setusers((prev)=>{
 }
   return (
     <div>
-      {/* <Userform setusers={updateusers}></Userform>
-     */}
+      <Userform setusers={updateusers}></Userform>
+    <br/>
 
       <UserList users={Users}></UserList>
      </div>

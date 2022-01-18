@@ -1,0 +1,51 @@
+.backgrd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+  }
+  
+  .modal {
+    position: fixed;
+    top: 10vh;
+    left: 40vw;
+
+    width: 30%;
+    z-index: 100;
+    overflow: hidden;
+    border: black 2px solid;
+    background-color: rgb(94, 94, 158);
+    border-radius: 20px;
+    
+  }
+  
+  .header {
+    background: rgb(193, 193, 241);
+    padding:  5px 10px;
+    margin:0 0;
+    
+  }
+  
+  .header h2 {
+    margin: 0 0;
+    color: rgb(59, 46, 70);
+  }
+  
+  .message {
+      font-size: x-large;
+    padding-left: 10px;
+  }
+  
+  .btn {
+    padding: 0 10px;
+    display: flex;
+justify-content: flex-end;
+
+  }
+footer button{
+    background-color: #4f005f;
+
+  }

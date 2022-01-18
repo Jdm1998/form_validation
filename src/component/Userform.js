@@ -1,29 +1,69 @@
+
 import React from 'react'
+import { useState } from 'react';
+import { ErrooModal } from './ErrooModal';
 import './Userform.css'
 export const Userform = (props) => {
-    const user={};
+    const [user,setuser]=useState({name:'',
+    age:'',
+        email:'',
+        phn:''});
+    
+        const[err,errupdate]=useState();
+
+
    const namehandler=(event)=>{
-        user.name=event.target.value;
+        setuser({...user,name:event.target.value});
     }
+
    const agehandler=(event)=>{
-        user.age=event.target.value;
+    setuser({...user,age:event.target.value});
     }
+
    const phnhandler=(event)=>{
-        user.phn=event.target.value;
+    setuser({...user,phn:event.target.value});
     }
+
    const emailhandler=(event)=>{
-        user.email=event.target.value;
+    setuser({...user,email:event.target.value,key:Math.random()*100});
+    
+    
+    }
+    const reseterr=()=>{
+        errupdate(null);
     }
     const submithandler=(event)=>{
+      
         event.preventDefault();
-        props.setusers(user);
+        if(user.name.trim().length===0||user.age.trim().length===0||user.age.trim().length===0||user.email.trim().length===0)
+        {
+            errupdate({title:'Empty value', message:'please provide all information'})
+            return;
+        }
+        if(+user.age<18)
+        {
+            errupdate({title:'Under Age', message:'Age must be equal or greater than 18'})
+            return;
+        }
+         console.log("user details");
+         console.log(user);
         
+        props.setusers(user);
+        setuser({name:'',
+                age:'',
+                    email:'',
+                    phn:''});
+                   
     }
     return (
         <div className='userForm'>
+            
+
+            {  err&&  <ErrooModal err={err} rst={reseterr}></ErrooModal>
+}
             <form onSubmit={submithandler}>
 
-                <div className='heading'>
+                <div className='headingF'>
                     User Form
                 </div>
                 <div className='formName'>
@@ -32,7 +72,7 @@ export const Userform = (props) => {
                     </label>
                 </div>
                 <div className='formNameI'>
-                    <input type='text' onChange={namehandler}>
+                    <input type='text' value={user.name} onChange={namehandler}>
 
                     </input>
                 </div>
@@ -43,7 +83,7 @@ export const Userform = (props) => {
                     </label>
                 </div>
                 <div className='formAgeI'>
-                    <input type='number' onChange={agehandler}>
+                    <input type='number' value={user.age} onChange={agehandler}>
                         
                     </input>
                 </div>
@@ -53,7 +93,7 @@ export const Userform = (props) => {
                     </label>
                 </div>
                 <div className='formPhnI'>
-                    <input type='number' onChange={phnhandler}>
+                    <input type='number' value={ user.phn} onChange={phnhandler}>
                         
                     </input>
                 </div>
@@ -64,7 +104,7 @@ export const Userform = (props) => {
                     </label>
                 </div>
                 <div className='formEmailI'>
-                    <input type='text' onChange={emailhandler}>
+                    <input type='text'  value={user.email} onChange={emailhandler}>
                         
                     </input>
                 </div>
